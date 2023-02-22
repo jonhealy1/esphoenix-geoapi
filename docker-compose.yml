@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  app:
+    build: esphoenix_geoapi/.
+    ports:
+      - "4000:4000"
+    environment:
+      ELASTICSEARCH_URL: "http://elasticsearch:9200"
+    depends_on:
+      - elasticsearch
+    networks:
+      - app_network
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
+    environment:
+      discovery.type: single-node
+    ports:
+      - "9200:9200"
+    networks:
+      - app_network
+networks:
+  app_network:
