@@ -7,6 +7,8 @@ defmodule EsphoenixGeoapiWeb.Router do
 
   scope "/api", EsphoenixGeoapiWeb do
     pipe_through :api
+
+    resources "/collections", CollectionsController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
