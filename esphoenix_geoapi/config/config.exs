@@ -7,15 +7,12 @@
 # General application configuration
 import Config
 
-config :esphoenix_geoapi,
-  ecto_repos: [EsphoenixGeoapi.Repo]
-
 # Configures the endpoint
 config :esphoenix_geoapi, EsphoenixGeoapiWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: EsphoenixGeoapiWeb.ErrorView, accepts: ~w(html json), layout: false],
+  render_errors: [view: EsphoenixGeoapiWeb.ErrorView, accepts: ~w(json), layout: false],
   pubsub_server: EsphoenixGeoapi.PubSub,
-  live_view: [signing_salt: "4ezDuvvJ"]
+  live_view: [signing_salt: "q6e0a6aK"]
 
 # Configures the mailer
 #

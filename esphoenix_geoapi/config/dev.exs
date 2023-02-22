@@ -1,15 +1,5 @@
 import Config
 
-# Configure your database
-config :esphoenix_geoapi, EsphoenixGeoapi.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "esphoenix_geoapi_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -23,7 +13,7 @@ config :esphoenix_geoapi, EsphoenixGeoapiWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "Mux0LKnZPY4coSjoiZ0od5BIMPq9mkCUiX39iHufF+KcOjR8+vJi1V0r0pAZT5Jl",
+  secret_key_base: "bKZliK00uNC4uM1Jj49tRa8jrLMIBadfdjEStWF+NEUuRl+1HFl9+H3CGEfrg64G",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
@@ -52,17 +42,6 @@ config :esphoenix_geoapi, EsphoenixGeoapiWeb.Endpoint,
 # If desired, both `http:` and `https:` keys can be
 # configured to run both http and https servers on
 # different ports.
-
-# Watch static and templates for browser reloading.
-config :esphoenix_geoapi, EsphoenixGeoapiWeb.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"priv/gettext/.*(po)$",
-      ~r"lib/esphoenix_geoapi_web/(live|views)/.*(ex)$",
-      ~r"lib/esphoenix_geoapi_web/templates/.*(eex)$"
-    ]
-  ]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

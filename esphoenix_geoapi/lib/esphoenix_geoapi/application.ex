@@ -8,8 +8,6 @@ defmodule EsphoenixGeoapi.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      EsphoenixGeoapi.Repo,
       # Start the Telemetry supervisor
       EsphoenixGeoapiWeb.Telemetry,
       # Start the PubSub system
