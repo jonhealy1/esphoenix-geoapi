@@ -13,7 +13,8 @@ defmodule EsphoenixGeoapi.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: EsphoenixGeoapi.PubSub},
       # Start the Endpoint (http/https)
-      EsphoenixGeoapiWeb.Endpoint
+      EsphoenixGeoapiWeb.Endpoint,
+      EsphoenixGeoapi.ElasticsearchCluster
       # Start a worker by calling: EsphoenixGeoapi.Worker.start_link(arg)
       # {EsphoenixGeoapi.Worker, arg}
     ]
